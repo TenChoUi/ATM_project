@@ -1032,8 +1032,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userData:
     userName: "\uC870\uACBD\uD604"
-    cash: 100000
-    balance: 50000
+    cash: 50000
+    balance: 30000
   userInfo: {fileID: 0}
 --- !u!4 &352503808
 Transform:
@@ -1063,8 +1063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1548683449}
-  cashText: {fileID: 1288420475}
-  balanceText: {fileID: 1236972471}
+  cashText: {fileID: 1236972471}
+  balanceText: {fileID: 1288420475}
 --- !u!114 &352503810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,8 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca521bcba39d034aae00c59545ea0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depositPanel: {fileID: 1570890677}
-  withdrawPanel: {fileID: 1674664207}
+  depositPanel: {fileID: 1284503822}
+  withdrawPanel: {fileID: 141147701}
   buttonPanel: {fileID: 1348308571}
   errorPanel: {fileID: 209509044}
   depositInput: 10000
