@@ -1081,6 +1081,8 @@ MonoBehaviour:
   withdrawPanel: {fileID: 141147701}
   buttonPanel: {fileID: 1348308571}
   errorPanel: {fileID: 209509044}
+  input: {fileID: 1003299575}
+  output: {fileID: 1864523133}
   depositInput: 10000
   withdrawInput: 10000
 --- !u!1 &357527848
@@ -2908,19 +2910,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 352503810}
-        m_TargetAssemblyTypeName: PopupBank, Assembly-CSharp
-        m_MethodName: DepositAmount
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1000
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -3145,8 +3135,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 20}
-  m_SizeDelta: {x: 340.155, y: 61.9645}
+  m_AnchoredPosition: {x: 0, y: 30.982}
+  m_SizeDelta: {x: 380.0072, y: 61.9645}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207285722
 MonoBehaviour:
@@ -4314,8 +4304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -321.19604, y: 196.6095}
-  m_SizeDelta: {x: 265.7881, y: 210.5431}
+  m_AnchoredPosition: {x: -321.19604, y: 192.25305}
+  m_SizeDelta: {x: 265.7881, y: 201.8303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1407313180
 GameObject:
@@ -4330,7 +4320,7 @@ GameObject:
   - component: {fileID: 1407313183}
   - component: {fileID: 1407313182}
   m_Layer: 5
-  m_Name: Money (3)
+  m_Name: Input Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4399,7 +4389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1407313183}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 352503810}
+        m_TargetAssemblyTypeName: PopupBank, Assembly-CSharp
+        m_MethodName: InputButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1407313183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5531,8 +5533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012159, y: -75}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0.000022888, y: -69.7}
+  m_SizeDelta: {x: 248.1966, y: 61.2901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733322047
 MonoBehaviour:
@@ -6069,19 +6071,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 352503810}
-        m_TargetAssemblyTypeName: PopupBank, Assembly-CSharp
-        m_MethodName: WithdrawAmount
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1000
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -6216,7 +6206,7 @@ GameObject:
   - component: {fileID: 1883366608}
   - component: {fileID: 1883366607}
   m_Layer: 5
-  m_Name: Money (3)
+  m_Name: Output Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6285,7 +6275,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1883366608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 352503810}
+        m_TargetAssemblyTypeName: PopupBank, Assembly-CSharp
+        m_MethodName: OutputButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1883366608
 MonoBehaviour:
   m_ObjectHideFlags: 0

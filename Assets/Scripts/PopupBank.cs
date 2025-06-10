@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class PopupBank : MonoBehaviour
 {
@@ -7,6 +7,9 @@ public class PopupBank : MonoBehaviour
     public GameObject withdrawPanel;
     public GameObject buttonPanel;
     public GameObject errorPanel;
+    public InputField input;
+    public InputField output;
+    
     [fleld: SerializeField] public string depositInput;
     [fleld: SerializeField] public string withdrawInput;
 
@@ -41,19 +44,6 @@ public class PopupBank : MonoBehaviour
             errorPanel.SetActive(true);
         }
     }
-
-    /*public void DepositInputAmount()
-    {
-        if (int.TryParse (depositInput.text, out int amount)) 
-        {
-            DepositAmount(amount);
-        }
-        else
-        {
-            depositInput.text = "";
-        }
-
-     }*/
     
     public void WithdrawAmount(int amount)
     {
@@ -68,17 +58,17 @@ public class PopupBank : MonoBehaviour
         }
     }
     
-    /*public void WithdrawInputAmount()
+    public void InputButton()
     {
-        if (int.TryParse(withdrawInput.text, out int amount))
-        {
-            WithdrawAmount(amount);
-        }
-        else
-        {
-            withdrawInput.text = "";
-        }
-        
-        withdrawInput.text = "";
-    }*/
+        Debug.Log(input.text);
+        int dep = int.Parse(input.text);
+        DepositAmount(dep);
+    }
+
+    public void OutputButton()
+    {
+        Debug.Log(output.text);
+        int wit = int.Parse(output.text);
+        WithdrawAmount(wit);
+    }
 }
