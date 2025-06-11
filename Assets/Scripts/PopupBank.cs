@@ -37,8 +37,8 @@ public class PopupBank : MonoBehaviour
     {
         if (GameManager.Instance.userData.cash >= amount)
         {
-            GameManager.Instance.userData.cash -= amount;
             GameManager.Instance.UpdateBalance(amount);
+            GameManager.Instance.SaveUserData();
         }
         else
         {
@@ -50,8 +50,8 @@ public class PopupBank : MonoBehaviour
     {
         if (GameManager.Instance.userData.balance >= amount)
         {
-            GameManager.Instance.userData.balance -= amount;
             GameManager.Instance.UpdateCash(amount);
+            GameManager.Instance.SaveUserData();
         }
         else
         {

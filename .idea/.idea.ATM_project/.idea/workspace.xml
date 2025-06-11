@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ec70addc-36bb-4387-b00e-06c5c8e77bb3" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ATM_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ATM_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupBank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PopupBank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInfo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +116,7 @@
       <workItem from="1749428035430" duration="21729000" />
       <workItem from="1749514112296" duration="5041000" />
       <workItem from="1749521660686" duration="13780000" />
-      <workItem from="1749600204577" duration="2968000" />
+      <workItem from="1749600204577" duration="5240000" />
     </task>
     <servers />
   </component>
