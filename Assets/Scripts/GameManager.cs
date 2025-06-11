@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        
+        LoadUserData();
 
-        userData = new UserData("조경현", 300000, 500000);
+        //userData = new UserData("조경현", 300000, 500000);
     }
 
     public void Start()
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
         {
             userInfo = GetComponent<UserInfo>();
         }
+        
+        SaveUserData();
     }
 
     public void UpdateName(string newName)
@@ -47,6 +51,29 @@ public class GameManager : MonoBehaviour
     {
         userData.balance += amount;
         userInfo.Refresh();
+    }
+
+    public void SaveUserData()
+    {
+        PlayerPrefs.SetString("Name", userData.userName);
+        PlayerPrefs.SetInt("Cash", userData.cash);
+        PlayerPrefs.SetInt("Balance", userData.balance);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadUserData()
+    {
+        if (PlayerPrefs.HasKey("Name"))
+        {
+            string name = PlayerPrefs.GetString("Name");
+            int cash = PlayerPrefs.GetInt("Cash");
+            int balance = PlayerPrefs.GetInt("Balance");
+            userData = new  UserData(name, cash, balance);
+        }
+        else
+        {
+            userData = new UserData("조경현", 300000, 500000);
+        }
     }
 }
 
