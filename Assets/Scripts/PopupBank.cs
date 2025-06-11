@@ -37,8 +37,9 @@ public class PopupBank : MonoBehaviour
     {
         if (GameManager.Instance.userData.cash >= amount)
         {
+            GameManager.Instance.userData.cash -= amount; // ATM 내부 값 변환
             GameManager.Instance.UpdateBalance(amount);
-            GameManager.Instance.SaveUserData();
+            GameManager.Instance.SaveUserData(); // ATM 값 저장
         }
         else
         {
@@ -50,8 +51,9 @@ public class PopupBank : MonoBehaviour
     {
         if (GameManager.Instance.userData.balance >= amount)
         {
+            GameManager.Instance.userData.balance -= amount; // 현금 값 변환
             GameManager.Instance.UpdateCash(amount);
-            GameManager.Instance.SaveUserData();
+            GameManager.Instance.SaveUserData(); // 현금 값 저장
         }
         else
         {

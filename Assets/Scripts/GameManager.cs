@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
 
     public void SaveUserData()
     {
-        Debug.Log("Saving user data");
         PlayerPrefs.SetString("Name", userData.userName);
         PlayerPrefs.SetInt("Cash", userData.cash);
         PlayerPrefs.SetInt("Balance", userData.balance);
@@ -61,7 +60,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadUserData()
     {
-        Debug.Log("Loading user data");
         if (PlayerPrefs.HasKey("Name"))
         {
             string name = PlayerPrefs.GetString("Name");
@@ -72,6 +70,7 @@ public class GameManager : MonoBehaviour
         else
         {
             userData = new UserData("조경현", 300000, 500000);
+            // 로드 할 userdata 값이 없을 시 부르는 기본 변수 값
         }
         userInfo.Refresh();
     }
